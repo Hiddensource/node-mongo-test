@@ -18,9 +18,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
         console.log('Unable to fetch data ', err);
     });
 
-    db.collection('Todos').find({
-        _id: new ObjectID('5bd6a45a0aa9161dd8eeff6a')
-    }).toArray().then((docs) => {
+    db.collection('Todos').find().toArray().then((docs) => {
         console.log(JSON.stringify(docs, undefined, 3));
     }, (err) => {
         console.log('Unable to fetch data ', err);
