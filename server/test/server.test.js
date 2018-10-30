@@ -38,7 +38,6 @@ describe('POST /todos', () => {
     });
 
     it('should not create a test',(done)=>{
-        var text = '';
         request(app)
             .post('/todos')
             .send({})
